@@ -6,7 +6,7 @@ namespace ConsoleApp.Controllers
     {
         public string Index()
         {
-            return "Deepak Thakur Sanjay Colony";
+            return "Deepak Thakur";
         }
     }
 }
