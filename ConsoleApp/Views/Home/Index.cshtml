@@ -1,0 +1,17 @@
+﻿<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/css/Site.css" rel="stylesheet" />
+
+<div>
+    <environment names="Development">
+        <h1>Development</h1>
+    </environment>
+    <environment names="Production">
+        <h1>Production</h1>
+    </environment>
+</div>
+
+<div class="welcome">Welcome </div>
+<div>
+    <a asp-controller="home" asp-action="uploadsong" class="link-offset-2 link-underline link-underline-opacity-0">Uload Song</a>
+    <a asp-controller="home" asp-action="allsong"  class="link-offset-2 link-underline link-underline-opacity-0">Search Song</a>
+</div>

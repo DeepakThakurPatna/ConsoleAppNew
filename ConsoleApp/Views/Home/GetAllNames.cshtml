@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ConsoleModel>
+@{
+    ViewData["Title"] = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>List Of Jesus Song</h1>
+<link href="~/css/Site.css" rel="stylesheet" />
+<div>Search Song</div>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Song Name</th>
+                    <th scope="col">Song Description</th>
+                    <th scope="col">Artist Name</th>
+                </tr>
+            </thead>
+            @foreach (var n in Model)
+            {
+                <tbody>
+                    <tr>
+                       
+                        <td>@n.SongSrNo</td>
+                        <td>@n.SongName</td>
+                        <td>@n.SongDescription</td>
+                        <td>@n.ArtistName</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+

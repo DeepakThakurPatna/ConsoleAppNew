@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ConsoleModel>;
+
+<link href="~/css/Site.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="d-flex flex-row mb-3">
+    <div class="p-1">
+        All Song List
+    </div>
+    <div class="p-3">
+        <form method="get">
+            <div class="input-group">
+                <input class"form-control" asp-for="SearchSong" text="text" placeholder="Search Song"/>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div> 
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Song Name</th>
+                    <th scope="col">Song Description</th>
+                    <th scope="col">Artist Name</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            @foreach (var n in Model)
+            {
+                <tbody>
+                    <tr id="myUL">
+
+                        <td>@n.SongSrNo</td>
+                        <td>@n.SongName</td>
+                        <td>@n.SongDescription</td>
+                        <td>@n.ArtistName</td>
+                        <td>
+                            <a asp-route="Song" asp-route-SongId="@n.SongId">View</a>
+                            <a>| Delete </a>
+                            <a>| Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+</div>
+
